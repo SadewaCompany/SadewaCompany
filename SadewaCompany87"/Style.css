@@ -1,19 +1,144 @@
+/* Gaya Umum */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-h1 {
-    color: #0066cc;
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-#calculator {
-    margin-top: 20px;
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-input {
-    margin: 5px 0;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Konten */
+section {
+    padding: 50px 0;
+}
+
+/* Konten Beranda */
+#beranda {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    min-height: 600px;
+}
+
+#beranda h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#beranda p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Konten Tentang Kami */
+#tentang {
+    background: #fff;
+    color: #333;
+}
+
+#tentang h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#tentang p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Konten Layanan */
+#layanan {
+    background: #f9f9f9;
+    color: #333;
+}
+
+#layanan h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#layanan p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Konten Kontak */
+#kontak {
+    background: #333;
+    color: #fff;
+}
+
+#kontak h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#kontak p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Tombol */
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
 }
