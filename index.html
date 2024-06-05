@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SadewaCompany87</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header, .footer {
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .content {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            max-width: 100px;
+            margin: 0 auto;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        .tools, .calculator {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <img src="SadewaCompany87.png" alt="SadewaCompany87 Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#services">Layanan</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Beranda -->
+    <div class="content" id="home">
+        <h1>SadewaCompany87</h1>
+        <p>Trading Forex dan Crypto Terpercaya</p>
+        <p>Selamat datang di SadewaCompany87! Kami adalah perusahaan trading yang mengedukasi dan memberikan fasilitas menarik seperti akun funded dan sistem pembelajaran inovatif. Kami siap membantu Anda menjadi trader profesional yang sukses.</p>
+    </div>
+
+    <!-- Tentang Kami -->
+    <div class="content" id="about">
+        <h2>Tentang Kami</h2>
+        <p>SadewaCompany87 adalah perusahaan yang bergerak dalam bidang trading. Kami fokus pada edukasi dan menyediakan fasilitas menarik seperti akun funded dan sistem pembelajaran dengan guru-guru berpengalaman. Tujuan kami adalah menciptakan lulusan yang hebat dan mahir dalam trading forex dan crypto.</p>
+        <h3>Visi</h3>
+        <ul>
+            <li>Menciptakan lapangan kerja yang baru.</li>
+            <li>Membantu trader memiliki metode trading sendiri.</li>
+            <li>Mengembangkan portofolio trading yang jelas.</li>
+        </ul>
+        <h3>Misi</h3>
+        <ul>
+            <li>Mendidik mengenai kedisiplinan dalam trading.</li>
+            <li>Mendidik untuk mengatur emosional dalam trading.</li>
+            <li>Mengajarkan penggunaan stop loss dan take profit.</li>
+            <li>Memahami risk and reward ratio dalam trading.</li>
+        </ul>
+    </div>
+
+    <!-- Layanan -->
+    <div class="content" id="services">
+        <h2>Layanan Kami</h2>
+
+        <!-- Tools Backtest Metode -->
+        <div class="tools">
+            <h3>Tools Backtest Metode</h3>
+            <form id="backtestForm">
+                <label for="pair">Pair Forex atau Koin Crypto:</label>
+                <input type="text" id="pair" name="pair" required>
+                <label for="entryPrice">Harga Entry:</label>
+                <input type="number" id="entryPrice" name="entryPrice" required>
+                <label for="stopLoss">Harga Stop Loss:</label>
+                <input type="number" id="stopLoss" name="stopLoss" required>
+                <label for="takeProfit">Harga Take Profit:</label>
+                <input type="number" id="takeProfit" name="takeProfit" required>
+                <label for="entryDate">Tanggal Entry (YYYY-MM-DD):</label>
+                <input type="date" id="entryDate" name="entryDate" required>
+                <button type="submit">Backtest</button>
+            </form>
+            <div id="backtestResults"></div>
+        </div>
+
+        <!-- Kalkulator Risiko -->
+        <div class="calculator">
+            <h3>Kalkulator Risiko</h3>
+            <form id="riskCalculatorForm">
+                <label for="riskPair">Pair Forex atau Koin Crypto:</label>
+                <input type="text" id="riskPair" name="riskPair" required>
+                <label for="initialCapital">Modal Awal (USD atau Rupiah):</label>
+                <input type="number" id="initialCapital" name="initialCapital" required>
+                <input type="buyatausell">pilih buy atau sell:</label>
+                <label for="riskEntryPrice">Harga Entry:</label>
+                <input type="number" id="riskEntryPrice" name="riskEntryPrice" required>
+                <label for="riskStopLoss">Harga Stop Loss:</label>
+                <input type="number" id="riskStopLoss" name="riskStopLoss" required>
+                <label for="riskTakeProfit">Harga Take Profit:</label>
+                <input type="number" id="riskTakeProfit" name="riskTakeProfit" required>
+                <label for="riskPercentage">Persen Risiko per Trading (%):</label>
+                <input type="number" id="riskPercentage" name="riskPercentage" required>
+                <button onclick="calculateRisk()">Hitung Risiko</button>
+            </form>
+            <div id="riskResults"></div>
+        </div>
+    </div>
+
+    <!-- Kontak -->
+    <div class="content" id="contact">
+        <h2>Kontak Kami</h2>
+        <p>Kami siap membantu Anda. Jika Anda memiliki pertanyaan atau informasi membutuhkan lebih lanjut, jangan ragu untuk menghubungi kami.</p>
+        <p><strong>Alamat:</strong> Jl.Kampung Cibuntu Asem RT02/RW05, Kec Cibitung, Kab Bekasi</p>
+        <p><strong>Telepon:</strong> +62 813-8336-1321</p>
+        <p><strong>Email:</strong> info@SadewaCompany87</p>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Nama" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="5" placeholder="Pesan" required></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 SadewaCompany87. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        // JavaScript untuk Backtest Metode
+        document.getElementById('backtestForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Ambil nilai dari form
+            const pair = document.getElementById('pair').value;
+            const entryPrice = parseFloat(document.getElementById('entryPrice').value);
+            const stopLoss = parseFloat(document.getElementById('stopLoss').value);
+            const takeProfit = parseFloat(document.getElementById('takeProfit').value);
+            const entryDate = document.getElementById('entryDate').value;
+
+            // Proses backtest (ini adalah simulasi sederhana, sebaiknya gunakan data historis
+            
